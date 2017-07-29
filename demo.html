@@ -1,0 +1,51 @@
+<html>
+
+<head>
+
+</head>
+
+<body>
+
+    <h1>Scanner test</h1>
+
+    <p>
+        Input tester: <input type="text" id="barcode-input-box" autofocus></input>
+    </p>
+
+    <div id="barcode-display">
+
+    </div>
+
+</body>
+
+<style>
+
+#barcode-display{
+
+    width: 600px;
+
+    height: 200px;
+
+    background-color: rgb(200, 20, 40);
+
+    border: 2px dashed black;
+
+    font-size: 3em;
+
+}
+
+</style>
+
+<script src="web-usb-barcode-scanner.js"></script>
+
+<script>
+
+onBarcodeScanCallback = function (barcode){
+
+    document.getElementById("barcode-display").innerHTML = barcode;
+
+};
+
+</script>
+
+</html>
